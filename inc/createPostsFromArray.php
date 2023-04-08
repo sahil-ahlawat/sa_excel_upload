@@ -7,8 +7,9 @@
  * @return void
  */
 function sa_create_post_from_array($data){
+    global $sa_response;
     if(!$data){
-        echo "No data in excel";
+        $sa_response = "No data in excel";
         return false;
     }
     $count = 0;
@@ -32,5 +33,5 @@ function sa_create_post_from_array($data){
        update_post_meta( $id, 'session', $session );
        update_post_meta( $id, 'category', $category );
     }
-    echo "<h3 style='color:green;'>$count Placements uploaded!</h3>";
+    $sa_response = "<h3 style='color:green;'>$count Placements uploaded!</h3>";
 }

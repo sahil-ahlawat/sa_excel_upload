@@ -28,7 +28,7 @@ function sa_handle_post(){
 			
 			$csv_url = get_attached_file($uploaded);
 			echo "<p>";
-			echo "To insert the Placements into the database, click the button to the right.";
+			echo "To insert the Placements into the database, click submit";
 			echo '<form method="post">';
 			echo '<input type="hidden" name="page" value="sa-csv-import">';
 			echo '<input type="hidden" name="action" value="sa_create_post">';
